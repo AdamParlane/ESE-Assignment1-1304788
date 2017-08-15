@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 # Create Video Capture Object (0 is the camera number)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 while(True):
  # Capture frame-by-frame
  ret, frame = cap.read()
@@ -27,7 +27,7 @@ while(True):
         cv2.line(frame,(x1,y1),(x2,y2),(0,0,255),2)
  # Display the resulting frame
  cv2.imshow('frame',frame)
- cv2.imshow('frame2',edges)
+# cv2.imshow('frame2',edges)
  # Wait for user exit (press 'q')
  if cv2.waitKey(1) & 0xFF == ord('q'):
     break
