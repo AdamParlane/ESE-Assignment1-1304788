@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9a6b41e5-521d-4253-9df0-5d57567ccb6a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ESE_Assignment1_1304788.py</StartupFile>
+    <StartupFile>Previous Tutorials\exercise8-detect-circles.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,10 +23,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ESE_Assignment1_1304788.py" />
+    <Compile Include="Previous Tutorials\exercise5-drawing-on-video.py" />
+    <Compile Include="Previous Tutorials\exercise6-edge-detection.py" />
+    <Compile Include="Previous Tutorials\exercise7-hough-transform.py" />
+    <Compile Include="Previous Tutorials\exercise8-detect-circles.py" />
+    <Compile Include="Previous Tutorials\grayscale.py" />
+    <Compile Include="Previous Tutorials\liveStream.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|2.7" />
     <InterpreterReference Include="Global|PythonCore|2.7-32" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Previous Tutorials\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
