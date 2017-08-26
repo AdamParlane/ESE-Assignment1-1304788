@@ -9,7 +9,7 @@ while(True):
  # Convert To Greyscale
  grey = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
  # Identify Circles
- circles = cv2.HoughCircles(grey,cv.CV_HOUGH_GRADIENT,1,20,param1=60,param2=40)
+ circles = cv2.HoughCircles(grey,cv.CV_HOUGH_GRADIENT,1,20,param1=40, param2=30, minRadius=5, maxRadius=30)
  if(circles != None):
      # Convert to Numpy array
      circles = np.uint16(np.around(circles))

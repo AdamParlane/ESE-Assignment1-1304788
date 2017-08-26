@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9a6b41e5-521d-4253-9df0-5d57567ccb6a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Previous Tutorials\framerate.py</StartupFile>
+    <StartupFile>HSV-Colour-Picker.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ESE_Assignment1_1304788.py" />
+    <Compile Include="gaussianFilter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HSV-Colour-Picker.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="medianFilter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Previous Tutorials\bilateralFilter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Previous Tutorials\bwThreshold.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Previous Tutorials\colorThreshold.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Previous Tutorials\exercise5-drawing-on-video.py" />
     <Compile Include="Previous Tutorials\exercise6-edge-detection.py" />
     <Compile Include="Previous Tutorials\exercise7-hough-transform.py" />
