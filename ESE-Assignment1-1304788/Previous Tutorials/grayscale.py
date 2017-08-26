@@ -6,11 +6,12 @@ from datetime import datetime
 cap = cv2.VideoCapture(0)
 cap.set(3, 1080)
 cap.set(4, 1920)
+counter = 0
 
 while(True):
     #capture frame by frame
     ret, frame = cap.read()
-
+    counter = counter + 1
     #record current time
     t = time.time()
 

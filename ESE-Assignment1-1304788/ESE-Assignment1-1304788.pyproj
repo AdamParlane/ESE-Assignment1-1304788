@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9a6b41e5-521d-4253-9df0-5d57567ccb6a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Previous Tutorials\exercise7-hough-transform.py</StartupFile>
+    <StartupFile>Previous Tutorials\framerate.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +27,9 @@
     <Compile Include="Previous Tutorials\exercise6-edge-detection.py" />
     <Compile Include="Previous Tutorials\exercise7-hough-transform.py" />
     <Compile Include="Previous Tutorials\exercise8-detect-circles.py" />
+    <Compile Include="Previous Tutorials\framerate.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Previous Tutorials\grayscale.py" />
     <Compile Include="Previous Tutorials\liveStream.py" />
   </ItemGroup>
