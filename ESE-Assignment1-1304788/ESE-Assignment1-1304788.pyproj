@@ -23,13 +23,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ESE_Assignment1_1304788.py" />
-    <Compile Include="gaussianFilter.py">
+    <Compile Include="FindPins.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Polygon.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Previous Tutorials\findingObjectCentres.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Previous Tutorials\findingObjectContours.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Previous Tutorials\gaussianFilter.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="HSV-Colour-Picker.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="medianFilter.py">
+    <Compile Include="Previous Tutorials\medianFilter.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Previous Tutorials\bilateralFilter.py">
@@ -50,6 +62,9 @@
     </Compile>
     <Compile Include="Previous Tutorials\grayscale.py" />
     <Compile Include="Previous Tutorials\liveStream.py" />
+    <Compile Include="ReferencLine.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|2.7" />
