@@ -62,7 +62,7 @@
     </Compile>
     <Compile Include="Previous Tutorials\grayscale.py" />
     <Compile Include="Previous Tutorials\liveStream.py" />
-    <Compile Include="ReferencLine.py">
+    <Compile Include="ReferenceLine.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
