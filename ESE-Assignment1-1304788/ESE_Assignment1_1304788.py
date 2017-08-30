@@ -40,19 +40,18 @@ while(True):
 
 
     blueShape = Polygon(bluePins, refLine)
-    returnedArea = (blueShape.displayArea())
+    blueShape.displayArea()
     #if (returnedArea):
-        #area[a] = returnedArea
-        #a += 1
-        #if(a == 10):
-            #a = 0
-    #area = blueShape.findConvexHull()
-
-    #for i in range(a):
-        #sum += area[a]
-    #average = sum / a
-
-    #print area[a]
+    #    area[a] = returnedArea
+    #    sum = 0
+    #    for i in range(10):
+    #        sum += area[i]
+    #    average = (sum / 10)
+    #    a += 1
+    #    if(a == 10):
+    #        a = 0
+    #print area
+    #print average
 
     #greenShape = Polygon(greenPins, refLine)
     #greenShape.displayArea()

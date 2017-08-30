@@ -5,6 +5,9 @@ class Polygon():
     global np
     import numpy as np
 
+    sarea = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    a = 0
+
     def __init__(self, polygonPins, refLine):
         self.frame = polygonPins.frame
         self.centres = polygonPins.centres
@@ -26,11 +29,20 @@ class Polygon():
             centreY = sumY / len(self.centres)
             #print centreX
             #print centreY
-            cv2.putText(self.frame, 'Area %.2f cm2' % (trueArea), (centreX - 60, centreY),
+            cv2.putText(self.frame, 'Area %.2f cm2' % (trueArea), (centreX - 60, centreY + 100),
                 cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)
-            return trueArea
-        else:
-            return 0
+            Polygon.sarea[Polygon.a] = trueArea
+            sum = 0
+            for i in range(10):
+                sum += Polygon.sarea[i]
+            average = (sum / 10)
+            Polygon.a += 1
+            if(Polygon.a == 10):
+                Polygon.a = 0
+            print Polygon.sarea
+            print average
+            cv2.putText(self.frame, 'Area %.2f cm2' % (average), (centreX - 60, centreY),
+                cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)
 
     def findConvexHull(self):
         points = np.array(self.centres)
