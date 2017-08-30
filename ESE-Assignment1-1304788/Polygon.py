@@ -1,10 +1,11 @@
 class Polygon():
+
     """description of class"""
     global cv2
     import cv2
     global np
     import numpy as np
-
+    #TODO: improve moving average
     sarea = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     a = 0
 
@@ -27,8 +28,6 @@ class Polygon():
                 sumY += self.centres[i][1]
             centreX = sumX / len(self.centres)
             centreY = sumY / len(self.centres)
-            #print centreX
-            #print centreY
             cv2.putText(self.frame, 'Area %.2f cm2' % (trueArea), (centreX - 60, centreY + 100),
                 cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)
             Polygon.sarea[Polygon.a] = trueArea
