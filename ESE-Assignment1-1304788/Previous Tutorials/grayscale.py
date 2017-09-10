@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 #create video capture object (0 is camera number)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cap.set(3, 1080)
 cap.set(4, 1920)
 counter = 0

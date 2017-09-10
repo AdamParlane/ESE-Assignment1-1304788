@@ -1,6 +1,7 @@
 class ReferenceLine():
 
     """Finds and draws the reference line, this is used to create a scale factor to convert pixels to mm"""
+
     global cv2
     import cv2
 

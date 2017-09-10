@@ -1,7 +1,7 @@
 import cv2
 
 #create video capture object (0 is camera number)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 while(True):
     #capture frame by frame

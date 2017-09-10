@@ -1,6 +1,7 @@
 class FindPins():
 
     """Finds the push pins of a selected colur"""
+
     global cv2
     import cv2
 
@@ -15,7 +16,7 @@ class FindPins():
     def findPinCentre(self):
         # convert to HSV
         hsv = cv2.cvtColor(self.frame,cv2.COLOR_BGR2HSV)
-        # create HSV mask
+        # create HSV mask with iput hue range, saturation range 100-255, value range 50-255
         mask = cv2.inRange(hsv, (self.hueLow, 100, 50), (self.hueHigh, 255, 255))
         # identify contours in mask
         contours, _ = cv2.findContours(mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)

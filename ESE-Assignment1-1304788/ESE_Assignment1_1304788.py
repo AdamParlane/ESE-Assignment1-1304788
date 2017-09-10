@@ -19,6 +19,8 @@ while(True):
     # add a median filter to smooth contour irregularites
     frame = cv2.medianBlur(frame, 11)
     # find the locations of the red pins (the reference pins)
+    
+
     redPins = FindPins(frame, red)
     redPins.findPinCentre()
     # find the locations of the blue pins (the polygon pins)
@@ -27,18 +29,23 @@ while(True):
     # find the locations of the red pins (the secondary polygon pins)
     greenPins = FindPins(frame, green)
     greenPins.findPinCentre()
+
     # draw the reference line and calculate the scale factor
     refLine = ReferenceLine(redPins)
     refLine.calculateScaleFactor()
+
     # draw the blue convex polygon, calculate and display the area
     blueShape = Polygon(bluePins, refLine)
     blueShape.displayArea()
     # draw the green convex polygon, calculate and display the area
-    #greenShape = Polygon(greenPins, refLine)
-    #greenShape.displayArea()
+    greenShape = Polygon(greenPins, refLine)
+    greenShape.displayArea()
 
+    # add a watermark for authenticity
+    cv2.putText(frame, 'Adam Parlane 2017, MA(50)', (40, 80),
+        cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 0, 0), 1)
     # display the resulting frame
-    cv2.imshow('frame',frame)
+    cv2.imshow('Adam Parlane 2017',frame)
 
     # wait for user exit (press 'q')
     if cv2.waitKey(1) & 0xFF == ord('q'):
