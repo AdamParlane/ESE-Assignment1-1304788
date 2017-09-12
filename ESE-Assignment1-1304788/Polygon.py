@@ -8,7 +8,7 @@ class Polygon():
     import cv2
     global np
     import numpy as np
-    # declare empty list and counter to store moving average values
+    # declare empty list, window size and counter to store moving average values
     window = 50
     prevAreas = [0] * window
     counter = 0
@@ -43,7 +43,7 @@ class Polygon():
                 centreX = 100
                 centreY = 100
             # save the area value into the previous error list for the moving average filter
-            Polygon.prevAreas[Polygon.a] = trueArea
+            Polygon.prevAreas[Polygon.counter] = trueArea
             # sum the [window] previous error values and average them to find the moving average
             for i in range(Polygon.window):
                 sum += Polygon.prevAreas[i]
@@ -53,7 +53,7 @@ class Polygon():
             if(Polygon.counter == Polygon.window):
                 Polygon.counter = 0
             #display the text showing the area
-            cv2.putText(self.frame, 'Area %.2f cm2' % (trueArea), (centreX - 60, centreY),
+            cv2.putText(self.frame, 'Area %.2f cm2' % (average), (centreX - 60, centreY),
                 cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)
             #cv2.putText(self.frame, 'Area %.2f cm2' % (average), (centreX - 80, centreY + 20),
                 #cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)

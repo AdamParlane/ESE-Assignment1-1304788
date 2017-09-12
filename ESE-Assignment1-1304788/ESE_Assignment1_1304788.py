@@ -9,7 +9,7 @@ from Polygon import Polygon
 cap = cv2.VideoCapture(1)
 
 # define pin colours ("color", HSV_Hue_Low, HSV_Hue_High, (BGR tuple))
-red = ("red", 0, 30, (0, 0, 255))       # reference pins
+red = ("red", 0, 40, (0, 0, 255))       # reference pins
 blue = ("blue", 90, 125, (255, 0, 0))   # polygon pins
 green = ("green", 50, 90, (0, 100, 0))  # secondary polygon pins
 
@@ -27,8 +27,8 @@ while(True):
     bluePins = FindPins(frame, blue)
     bluePins.findPinCentre()
     # find the locations of the red pins (the secondary polygon pins)
-    greenPins = FindPins(frame, green)
-    greenPins.findPinCentre()
+    #greenPins = FindPins(frame, green)
+    #greenPins.findPinCentre()
 
     # draw the reference line and calculate the scale factor
     refLine = ReferenceLine(redPins)
@@ -38,8 +38,8 @@ while(True):
     blueShape = Polygon(bluePins, refLine)
     blueShape.displayArea()
     # draw the green convex polygon, calculate and display the area
-    greenShape = Polygon(greenPins, refLine)
-    greenShape.displayArea()
+    #greenShape = Polygon(greenPins, refLine)
+    #greenShape.displayArea()
 
     # add a watermark for authenticity
     cv2.putText(frame, 'Adam Parlane 2017, MA(50)', (40, 80),
