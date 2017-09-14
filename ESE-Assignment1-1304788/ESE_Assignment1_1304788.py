@@ -9,7 +9,7 @@ from Polygon import Polygon
 cap = cv2.VideoCapture(1)
 
 # define pin colours ("color", HSV_Hue_Low, HSV_Hue_High, (BGR tuple))
-red = ("red", 0, 40, (0, 0, 255))       # reference pins
+red = ("red", 0, 30, (0, 0, 255))       # reference pins
 blue = ("blue", 90, 125, (255, 0, 0))   # polygon pins
 green = ("green", 50, 90, (0, 100, 0))  # secondary polygon pins
 

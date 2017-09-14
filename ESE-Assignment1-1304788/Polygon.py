@@ -32,7 +32,7 @@ class Polygon():
             trueArea = self.area * (self.scale**2) /100
             # calculate the centre of the polygon for label positioning
             # if statement to guard against division by 0
-            if(len(self.centres) > 0):
+            if(len(self.centres) > 3):
                 for i in range(len(self.centres)):
                     sumX += self.centres[i][0]
                     sumY += self.centres[i][1]
@@ -55,14 +55,12 @@ class Polygon():
             #display the text showing the area
             cv2.putText(self.frame, 'Area %.2f cm2' % (average), (centreX - 60, centreY),
                 cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)
-            #cv2.putText(self.frame, 'Area %.2f cm2' % (average), (centreX - 80, centreY + 20),
-                #cv2.FONT_HERSHEY_SIMPLEX,0.5, self.BGR, 1)
 
     def findConvexHull(self):
         # copy the contour centres to a numpy array
         points = np.array(self.centres)
         # if there are contours perform the moving average calculation
-        if(len(self.centres) > 0):
+        if(len(self.centres) > 3):
             # find the hull using open CV convexHull
             hull = cv2.convexHull(points)
             # draw the lines between each point of the polygon using the hull
