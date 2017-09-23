@@ -4,8 +4,8 @@ import numpy as np
 def nothing(x):
     pass
 cap = cv2.VideoCapture(1)
-cap.set(3,640)
-cap.set(4,480)
+cap.set(3,1280)
+cap.set(4,720)
 cv2.namedWindow('image')
 
 #easy assigments
